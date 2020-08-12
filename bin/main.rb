@@ -11,7 +11,6 @@ player1 = gets.chomp
 puts 'Player Two Enter your name'
 player2 = gets.chomp
 
-
 # Below is where the board will be displayed
 
 puts '| || || |'
@@ -30,10 +29,10 @@ puts 'Letters, spaces and special characters are not allowed!! Choose a number f
 # Method to Select which Player's turn
 
 if player1 is even
-  puts '#{player1} its your turn'
+  puts "#{player1} its your turn"
 else
-  puts '#{player2} its your turn'
-end 
+  puts "#{player2} its your turn"
+end
 
 # Get inputs by player 1 and player 2
 
@@ -43,17 +42,15 @@ puts 'Here are the free positions:' # Following we will display the positions th
 
 # Check if the move is valid or not and inform the player if its not allowed.
 
-If !valid
-  puts 'Hey this is not allowed!!'
-end
+unless valid puts 'Hey this is not allowed!!'; end
 
 # Move of player one displayed on the board
-puts '#{current_board_positions}'
+puts "Positions available: #{current_board_positions}"
 puts 'Player Two its your turn'
 
 # player2_input = gets.chomp
 # Display the board progress
-puts '#{current_board_positions}'
+puts "Positions available: #{current_board_positions}"
 # Check which player is to play next
 
 # Check Winner, if game is not a draw and spaces are all occupied
@@ -63,13 +60,8 @@ while !winner && turn_counter < 9
 end
 
 if winner
-  puts 'Congratulations #{player1} won'
-elsif
-  puts 'Congratulations #{player2} won'
+  puts "Congratulations #{player1} won"
+elsif puts "Congratulations #{player2} won"
 else
   puts "It's a draw!!"
 end
-
-# OR
-
-puts 'Its a draw please try again'
