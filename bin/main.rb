@@ -4,6 +4,14 @@
 
 puts 'Welcome to the tic-tac-toe game'
 
+puts 'Player One Insert Your name'
+
+player1 = gets.chomp
+
+puts 'Player Two Enter your name'
+player2 = gets.chomp
+
+
 # Below is where the board will be displayed
 
 puts '| || || |'
@@ -18,7 +26,14 @@ puts 'The winner occupies any horizontal, vertical or diagonal positions concurr
 puts 'Letters, spaces and special characters are not allowed!! Choose a number from 1 to 9'
 
 # Display the current positions that are taken, at the begining it will be empty.
-puts "Player One it's your turn"
+
+# Method to Select which Player's turn
+
+if player1 is even
+  puts '#{player1} its your turn'
+else
+  puts '#{player2} its your turn'
+end
 
 # Get inputs by player 1 and player 2
 
