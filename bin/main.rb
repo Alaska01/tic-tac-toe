@@ -42,7 +42,7 @@ puts 'Here are the free positions:' # Following we will display the positions th
 
 # Check if the move is valid or not and inform the player if its not allowed.
 
-unless valid puts 'Hey this is not allowed!!'; end
+unless valid ? 'Hey this is not allowed!!' : 'Valid move'
 
 # Move of player one displayed on the board
 puts "Positions available: #{current_board_positions}"
@@ -59,9 +59,11 @@ while !winner && turn_counter < 9
   # repeat player selection loop
 end
 
-if winner
+if winner == player1
   puts "Congratulations #{player1} won"
-elsif puts "Congratulations #{player2} won"
+elsif winner == player2
+  puts "Congratulations #{player2} won"
 else
   puts "It's a draw!!"
+end
 end
