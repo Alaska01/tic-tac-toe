@@ -33,24 +33,42 @@ if player1 is even
   puts '#{player1} its your turn'
 else
   puts '#{player2} its your turn'
-end
+end 
 
 # Get inputs by player 1 and player 2
 
+puts 'Here are the free positions:' # Following we will display the positions that can be taken
+
 # player1_input = gets.chomp
 
-# Move of player one displayed on the board
+# Check if the move is valid or not and inform the player if its not allowed.
 
+If !valid
+  puts 'Hey this is not allowed!!'
+end
+
+# Move of player one displayed on the board
+puts '#{current_board_positions}'
 puts 'Player Two its your turn'
 
 # player2_input = gets.chomp
 # Display the board progress
-
+puts '#{current_board_positions}'
 # Check which player is to play next
 
 # Check Winner, if game is not a draw and spaces are all occupied
 
-puts 'Congratulations You won'
+while !winner && turn_counter < 9
+  # repeat player selection loop
+end
+
+if winner
+  puts 'Congratulations #{player1} won'
+elsif
+  puts 'Congratulations #{player2} won'
+else
+  puts "It's a draw!!"
+end
 
 # OR
 
