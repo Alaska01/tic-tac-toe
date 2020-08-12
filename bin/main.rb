@@ -1,69 +1,73 @@
 #!/usr/bin/env ruby
 
-# Welcome users and show the board
+class TicTacToePseudocode
+  # Welcome users and show the board
 
-puts 'Welcome to the tic-tac-toe game'
+  current_board_positions = []
 
-puts 'Player One Insert Your name'
+  puts 'Welcome to the tic-tac-toe game'
 
-player1 = gets.chomp
+  puts 'Player One Insert Your name'
 
-puts 'Player Two Enter your name'
-player2 = gets.chomp
+  player1 = gets.chomp
 
-# Below is where the board will be displayed
+  puts 'Player Two Enter your name'
+  player2 = gets.chomp
 
-puts '| || || |'
-puts '-----------'
-puts '| || || |'
-puts '-----------'
-puts '| || || |'
-puts 'The winner occupies any horizontal, vertical or diagonal positions concurrently'
+  # Below is where the board will be displayed
 
-# Tell players the rules of the game and what is expected of them
+  puts '| || || |'
+  puts '-----------'
+  puts '| || || |'
+  puts '-----------'
+  puts '| || || |'
+  puts 'The winner occupies any horizontal, vertical or diagonal positions concurrently'
 
-puts 'Letters, spaces and special characters are not allowed!! Choose a number from 1 to 9'
+  # Tell players the rules of the game and what is expected of them
 
-# Display the current positions that are taken, at the begining it will be empty.
+  puts 'Letters, spaces and special characters are not allowed!! Choose a number from 1 to 9'
 
-# Method to Select which Player's turn
+  # Display the current positions that are taken, at the begining it will be empty.
 
-if player1 is even
-  puts "#{player1} its your turn"
-else
-  puts "#{player2} its your turn"
-end
+  # Method to Select which Player's turn
 
-# Get inputs by player 1 and player 2
+  if player1 is even
+    puts "#{player1} its your turn"
+  else
+    puts "#{player2} its your turn"
+  end
 
-puts 'Here are the free positions:' # Following we will display the positions that can be taken
+  # Get inputs by player 1 and player 2
 
-# player1_input = gets.chomp
+  puts 'Here are the free positions:' # Following we will display the positions that can be taken
 
-# Check if the move is valid or not and inform the player if its not allowed.
+  # player1_input = gets.chomp
 
-unless valid ? 'Hey this is not allowed!!' : 'Valid move'
+  # Check if the move is valid or not and inform the player if its not allowed.
 
-# Move of player one displayed on the board
-puts "Positions available: #{current_board_positions}"
-puts 'Player Two its your turn'
+  unless valid ? 'Hey this is not allowed!!' : 'Valid move'
 
-# player2_input = gets.chomp
-# Display the board progress
-puts "Positions available: #{current_board_positions}"
-# Check which player is to play next
+    # Move of player one displayed on the board
+    puts "Positions available: #{current_board_positions}"
+    puts 'Player Two its your turn'
 
-# Check Winner, if game is not a draw and spaces are all occupied
+    # player2_input = gets.chomp
+    # Display the board progress
+    puts "Positions available: #{current_board_positions}"
+    # Check which player is to play next
 
-while !winner && turn_counter < 9
-  # repeat player selection loop
-end
+    # Check Winner, if game is not a draw and spaces are all occupied
 
-if winner == player1
-  puts "Congratulations #{player1} won"
-elsif winner == player2
-  puts "Congratulations #{player2} won"
-else
-  puts "It's a draw!!"
-end
+    while !winner && turn_counter < 9
+      # repeat player selection loop
+    end
+
+    if winner == player1
+      puts "Congratulations #{player1} won"
+    elsif winner == player2
+      puts "Congratulations #{player2} won"
+    else
+      puts "It's a draw!!"
+    end
+  end
 end
