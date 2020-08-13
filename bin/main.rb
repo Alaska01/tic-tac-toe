@@ -59,7 +59,7 @@ class GameDynamics
 
   # Check if the move is valid or not and inform the player if its not allowed.
   def valid_move
-    unless valid ? 'Hey this is not allowed!!' : 'Valid move'; end
+    unless valid ? 'Hey this is not allowed!!' : 'Valid move'
   end
   # Move of player one displayed on the board
   puts "Positions available: #{current_board_positions}"
