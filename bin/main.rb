@@ -25,3 +25,6 @@
 # break game after displaying the WINNER 
 # g. IF no WINNER check for a DRAW, if there is a draw BREAK from LOOP and tell the players its a draw game,
 #  if no DRAW at this point INCREAMENT the COUNTER
+# C. SWAP PLAYERS when X turn is OVER to PLAYER O
+# a. Repeat the processed for Player O. This involes repeating processes B.I, b-g processes as done for
+# PLAYER 'X'
