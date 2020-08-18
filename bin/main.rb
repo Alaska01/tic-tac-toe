@@ -41,26 +41,28 @@ class SampleTicTacToeUserInterface
   def initialize
     @board = 'Create a board with 9 spaces represented by empty strings'
     @player = 'Create Player'
-    @turn_counter = 'Create turn counter and set it to number 1 by default'  
-   end
+    @turn_counter = 'Create turn counter and set it to number 1 by default'
+  end
 
-  #  Create A constant to house all the winning rows, columns and diagonals
-   WINNING_POSITIONS =['A Nested Array of all row, column and diagonals positions']
+  # Create A constant to house all the winning rows, columns and diagonals.
+  winning_positions = [[0, 1, 2], [3, 4, 5]]
+  # The above represents A Nested Array of all row column and diagonals positions etc
 
-  #  Create a Winning detection method
+  # Create a Winning detection method
 
   def winner
-    'This method will use the detect method to check the nested Arrays in WINNING_POSITIONS'
+    # 'This method will use the detect method to check the nested Arrays in WINNING_POSITIONS'
     # Conditions to Check in this loop are:
     # 1. if board at the nexted Arrays INDEX FIRST position == nexted Arrays INDEX SECOND position
     # 2. if board at the nexted Arrays INDEX SECOND position == nexted Arrays INDEX THIRD position
     # 3. If board at nexted Arrays INDEX FIRST position != ' '
     # If all the ABOVE three CONDITIONS are true, return an implicit true to this method
+    winning_positions
   end
 
   # From winner method find a way to define a draw method
   def draw
-  # This method returns true if there is NO winner and if turn counter == 9
+    # This method returns true if there is NO winner and if turn counter == 9
   end
 
   # Display Board method
@@ -70,51 +72,43 @@ class SampleTicTacToeUserInterface
   end
 
   # Player Selection method, this method selects players, uses a while loop to check for a winner,
-  # Draw game, check players turn, convert players input to the board position, break from loop if 
+  # Draw game, check players turn, convert players input to the board position, break from loop if
   # A winner or a draw is discovered and also updates the board, tells the player to enter the right
   # Number if a wrong value such as alphabets, numbers not expected by the game and special characters.
 
   def player_selection
-
     # Set counter to 1
     turn_counter = 1
 
     while turn_counter <= 10
-      if player is even?
+      if player_is_even?
         # Set Player to PLAYER X
         # Tell Player to enter input
         # convert Input to Integer
         # Convert Input to Index Board Position
-        if board is having a string?
-          # Update board with current players move
-          # Display board
-          # Check for Winner, if winner display board and break
-          # If draw puts its a draw game and break
-          # Increament Turn Counter
-          # If a wrong argument is entered alert the user and display the board
-
-        end
-
-      else
+        # board is having a string?
+        # Update board with current players move
+        # Display board
+        # Check for Winner, if winner display board and break
+        # If draw puts its a draw game and break
+        # Increament Turn Counter
+        # If a wrong argument is entered alert the user and display the board
+      elsif
         # Set Player to PLAYER X
         # Tell Player to enter input
         # convert Input to Integer
         # Convert Input to Index Board Position
-        if board is having a string?
-          # Update board with current players move
-          # Display board
-          # Check for Winner, if winner display board and break
-          # If draw puts its a draw game and break
-          # Increament Turn Counter
-          # If a wrong argument is entered alert the user and display the board
-        end
-
+        # Check if board is having a string?
+        # Update board with current players move
+        # Display board
+        # Check for Winner, if winner display board and break
+        # If draw puts its a draw game and break
+        # Increament Turn Counter
+        # If a wrong argument is entered alert the user and display the board
       end
-
     end
   end
-
 end
 
 # Run the game.
-# THE ABOVE IS THE PSEUDO LOGIC USED TO BUILD THE GAME BELOW.
+# The above is the pseudo code to build a working tic tac toe user interface.
