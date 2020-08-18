@@ -52,3 +52,13 @@ Layout/TrailingEmptyLines:
   Enabled: false
 Style/StringLiterals:
   Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/MethodLength:
+  Enebled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/BlockNesting:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
