@@ -113,6 +113,8 @@ end
 # Run the game.
 # The above is the pseudo code to build a working tic tac toe user interface.
 
+# REAL USER INTERFACE FOR TIC TAC TOE TESTED BELOW
+
 class TicTacToe
   attr_accessor :board, :player
   # initialize some variable that can be accessed throughout the game
@@ -226,7 +228,7 @@ class TicTacToe
             display_board
             break
           end
-          # Check for draw, if draw display board and break from loap
+          # Check for draw, if draw display board and break from loap.
           if draw
             puts 'Its a draw game'
             display_board
