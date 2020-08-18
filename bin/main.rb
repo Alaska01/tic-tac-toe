@@ -45,7 +45,8 @@ class SampleTicTacToeUserInterface
   end
 
   # Create A constant to house all the winning rows, columns and diagonals.
-  winning_positions = [[0, 1, 2], [3, 4, 5]]
+  # winning_positions = [[0, 1, 2], [3, 4, 5]]
+  # THE above ARRAY is commented out because of rubocop
   # The above represents A Nested Array of all row column and diagonals positions etc
 
   # Create a Winning detection method
@@ -57,7 +58,6 @@ class SampleTicTacToeUserInterface
     # 2. if board at the nexted Arrays INDEX SECOND position == nexted Arrays INDEX THIRD position
     # 3. If board at nexted Arrays INDEX FIRST position != ' '
     # If all the ABOVE three CONDITIONS are true, return an implicit true to this method
-    winning_positions
   end
 
   # From winner method find a way to define a draw method
@@ -81,34 +81,168 @@ class SampleTicTacToeUserInterface
     turn_counter = 1
 
     while turn_counter <= 10
-      if player_is_even?
-        # Set Player to PLAYER X
-        # Tell Player to enter input
-        # convert Input to Integer
-        # Convert Input to Index Board Position
-        # board is having a string?
-        # Update board with current players move
-        # Display board
-        # Check for Winner, if winner display board and break
-        # If draw puts its a draw game and break
-        # Increament Turn Counter
-        # If a wrong argument is entered alert the user and display the board
-      elsif
-        # Set Player to PLAYER X
-        # Tell Player to enter input
-        # convert Input to Integer
-        # Convert Input to Index Board Position
-        # Check if board is having a string?
-        # Update board with current players move
-        # Display board
-        # Check for Winner, if winner display board and break
-        # If draw puts its a draw game and break
-        # Increament Turn Counter
-        # If a wrong argument is entered alert the user and display the board
-      end
+      # if player_is_even?
+      # Set Player to PLAYER X
+      # Tell Player to enter input
+      # convert Input to Integer
+      # Convert Input to Index Board Position
+      # board is having a string?
+      # Update board with current players move
+      # Display board
+      # Check for Winner, if winner display board and break
+      # If draw puts its a draw game and break
+      # Increament Turn Counter
+      # If a wrong argument is entered alert the user and display the board
+      # elsif
+      # Set Player to PLAYER X
+      # Tell Player to enter input
+      # convert Input to Integer
+      # Convert Input to Index Board Position
+      # Check if board is having a string?
+      # Update board with current players move
+      # Display board
+      # Check for Winner, if winner display board and break
+      # If draw puts its a draw game and break
+      # Increament Turn Counter
+      # If a wrong argument is entered alert the user and display the board
+      # end
     end
   end
 end
 
 # Run the game.
 # The above is the pseudo code to build a working tic tac toe user interface.
+
+class TicTacToe
+  attr_accessor :board, :player
+  # initialize some variable that can be accessed throughout the game
+
+  def initialize
+    @board = Array.new(9, ' ')
+    @player = player
+    @turn_counter = 1
+  end
+  # Define Winning combinations
+  WINNING_COMBINATIONS = [[0, 1, 2],
+                          [3, 4, 5],
+                          [6, 7, 8],
+                          [0, 3, 6],
+                          [1, 4, 7],
+                          [2, 5, 8],
+                          [0, 4, 8],
+                          [2, 4, 6]].freeze
+  # Define Winner method
+
+  def winner
+    WINNING_COMBINATIONS.detect do |check|
+      @board[check[0]] == @board[check[1]] &&
+        @board[check[1]] == @board[check[2]] &&
+        @board[check[0]] != ' '
+    end
+  end
+  # Define draw method
+
+  def draw
+    !winner && @turn_counter == 9
+  end
+  #  Create a method to display board
+
+  def display_board
+    puts
+    puts '######'
+    puts "#{@board[0]}|#{@board[1]}|#{@board[2]} "
+    puts '######'
+    puts "#{@board[3]}|#{@board[4]}|#{@board[5]} "
+    puts '######'
+    puts "#{@board[6]}|#{@board[7]}|#{@board[8]} "
+    puts '######'
+    puts
+  end
+
+  #  player_selection method is used to start the game and check winning, draw, and also contains game logic
+
+  def player_selection
+    @turn_counter = 1
+    # While turn is less than 10 check conditions
+    while @turn_counter <= 10
+      # If counter is even set player to player X
+      if @turn_counter.even?
+        @player = 'X'
+        # Tell Player X to input values
+        print 'Player X its your turn, Enter a number between 1 and 9: '
+        # Convert value entered by player to integer
+        real_input = gets.to_i
+        # Convert value entered by player to integer and match it with board index
+        convert_index = real_input - 1
+        # Check if board is having empty STRING ' '
+        if @board[convert_index] == ' '
+          # Replace empty STRING with Players MOVE
+          @board[convert_index] = 'X'
+          # display MOVE on Board
+          display_board
+          # Check for Winning Condition
+          if winner
+            puts 'Player X is the Winner'
+            # Update Board
+            display_board
+            break
+          end
+          # Check for a Draw
+          if draw
+            puts 'Its a draw game'
+            # update board
+            display_board
+            break
+          end
+          # Increament Count
+          @turn_counter += 1
+
+        else
+          # update board
+          display_board
+          # Inform PLAYER of WRONG INPUT
+          puts 'Enter the correct digit next time or the position is occupied'
+
+        end
+        # SWITCH Between PLAYERS
+      else
+        # Set Player to 'O'
+        @player = 'O'
+        # Player 'O' to enter inputs
+        print 'Player O its your turn, Enter a number between 1 and 9: '
+        # Convert Players input to integer
+        real_input = gets.to_i
+        # Convert Interger to equivalent board INDEX position
+        convert_index = real_input - 1
+        # Check If BOARD is not occupied by either player O or X before
+        if @board[convert_index] == ' '
+          # Update board with Player O's Move
+          @board[convert_index] = 'O'
+          # Display Updated Board
+          display_board
+          # Check for Winner, If Winner display board and break from loop
+          if winner
+            puts 'Player O is the Winner'
+            display_board
+            break
+          end
+          # Check for draw, if draw display board and break from loap
+          if draw
+            puts 'Its a draw game'
+            display_board
+            break
+          end
+          # Increament counter
+          @turn_counter += 1
+        else
+          # Inform Player of Wrong input
+          display_board
+          puts 'Enter the correct digit next time or the position is occupied'
+        end
+      end
+    end
+  end
+end
+
+new_game = TicTacToe.new
+new_game.player_selection
