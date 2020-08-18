@@ -28,3 +28,35 @@
 # C. SWAP PLAYERS when X turn is OVER to PLAYER O
 # a. Repeat the processed for Player O. This involes repeating processes B.I, b-g processes as done for
 # PLAYER 'X'
+
+# Sample Prototype of USER INTERFACE BUILDING
+# Create a Class to house your game User Interface
+
+class SampleTicTacToeUserInterface
+  # Initialize Instance Variables to be used throughout the game
+  attr_accessor :board, :player
+
+  # Create an Initialize method to house Board, Player and Counter
+
+  def initialize
+    @board = 'Create a board with 9 spaces represented by empty strings'
+    @player = 'Create Player'
+    @turn_counter = 'Create turn counter and set it to number 1 by default'  
+   end
+
+  #  Create A constant to house all the winning rows, columns and diagonals
+   WINNING_POSITIONS =['A Nested Array of all row, column and diagonals positions']
+
+  #  Create a Winning detection method
+
+  def winner
+    'This method will use the detect method to check the nested Arrays in WINNING_POSITIONS'
+    # Conditions to Check in this loop are:
+    # 1. if board at the nexted Arrays INDEX FIRST position == nexted Arrays INDEX SECOND position
+    # 2. if board at the nexted Arrays INDEX SECOND position == nexted Arrays INDEX THIRD position
+    # 3. If board at nexted Arrays INDEX FIRST position != ' '
+    # If all the ABOVE three CONDITIONS are true, return an implicit true to this method
+  end
+
+
+end
