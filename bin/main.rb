@@ -210,7 +210,7 @@ class TicTacToe
         @player = 'O'
         # Player 'O' to enter inputs
         print 'Player O its your turn, Enter a number between 1 and 9: '
-        # Convert Players input to integer
+        # Convert Players input to integer.
         real_input = gets.to_i
         # Convert Interger to equivalent board INDEX position
         convert_index = real_input - 1
