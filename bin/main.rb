@@ -77,10 +77,44 @@ class SampleTicTacToeUserInterface
   def player_selection
 
     # Set counter to 1
+    turn_counter = 1
+
+    while turn_counter <= 10
+      if player is even?
+        # Set Player to PLAYER X
+        # Tell Player to enter input
+        # convert Input to Integer
+        # Convert Input to Index Board Position
+        if board is having a string?
+          # Update board with current players move
+          # Display board
+          # Check for Winner, if winner display board and break
+          # If draw puts its a draw game and break
+          # Increament Turn Counter
+          # If a wrong argument is entered alert the user and display the board
+
+        end
+
+      else
+        # Set Player to PLAYER X
+        # Tell Player to enter input
+        # convert Input to Integer
+        # Convert Input to Index Board Position
+        if board is having a string?
+          # Update board with current players move
+          # Display board
+          # Check for Winner, if winner display board and break
+          # If draw puts its a draw game and break
+          # Increament Turn Counter
+          # If a wrong argument is entered alert the user and display the board
+        end
+
+      end
+
+    end
   end
 
-
-
-
-
 end
+
+# Run the game.
+# THE ABOVE IS THE PSEUDO LOGIC USED TO BUILD THE GAME BELOW.
