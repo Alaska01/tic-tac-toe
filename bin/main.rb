@@ -58,5 +58,29 @@ class SampleTicTacToeUserInterface
     # If all the ABOVE three CONDITIONS are true, return an implicit true to this method
   end
 
+  # From winner method find a way to define a draw method
+  def draw
+  # This method returns true if there is NO winner and if turn counter == 9
+  end
+
+  # Display Board method
+  def display_board
+    # This method use the puts to display the board content with a combination of other charatecs
+    # To give the board a great look
+  end
+
+  # Player Selection method, this method selects players, uses a while loop to check for a winner,
+  # Draw game, check players turn, convert players input to the board position, break from loop if 
+  # A winner or a draw is discovered and also updates the board, tells the player to enter the right
+  # Number if a wrong value such as alphabets, numbers not expected by the game and special characters.
+
+  def player_selection
+
+    # Set counter to 1
+  end
+
+
+
+
 
 end
