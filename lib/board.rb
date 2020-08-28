@@ -34,4 +34,21 @@ class Board < PlayerSelection
         @board[check[0]] != ' '
     end
   end
+
+  def draw
+    !winner && @turn_counter == 9
+  end
+
+  # get_inputs changes to game_inputs take note
+  def game_inputs
+    @current_input = gets.strip.to_i
+  end
+
+  def standard_input
+    if @current_input == 1 || @current_input == 2 || @current_input == 3 ||
+       @current_input == 4 || @current_input == 5 || @current_input == 6 ||
+       @current_input == 7 || @current_input == 8 || @current_input == 9
+      true
+    end
+  end
 end
