@@ -51,4 +51,23 @@ class Board < PlayerSelection
       true
     end
   end
+
+  def board_index_position
+    @current_input - 1
+  end
+
+  def increment_counter_condition
+    @turn_counter
+  end
+
+  def repeated_process
+    true while !standard_input && !@board[board_index_position] == ' '
+  end
+
+  def update_board
+    if @board[board_index_position] == ' ' && standard_input
+      @turn_counter += 1
+      @board[board_index_position] = @player
+    end
+  end
 end
