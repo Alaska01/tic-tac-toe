@@ -62,3 +62,7 @@ Metrics/BlockNesting:
   Enabled: false
 Metrics/PerceivedComplexity:
   Enabled: false
+Style/IdenticalConditionalBranches:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
