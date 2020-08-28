@@ -70,5 +70,5 @@ while !board_trial.winner && !board_trial.draw
         sleep30
       end
     end
-    end
+  end
 end
