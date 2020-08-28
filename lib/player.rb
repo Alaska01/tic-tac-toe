@@ -1,5 +1,4 @@
 class PlayerSelection
-  
   attr_reader :player
   def initialize
     @player
@@ -7,7 +6,7 @@ class PlayerSelection
 
   def player_even?
     @player = 'X' if @turn_counter.even?
-   end
+  end
 
   def player_odd?
     @player = 'O' if @turn_counter.odd?
