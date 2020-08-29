@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '..\lib\board'
+require_relative '../lib/board'
 
 puts 'Welcome to Tic Tac Toe Game'
 puts 'Here are the game rules'
@@ -29,7 +29,7 @@ while !board_trial.winner && !board_trial.draw
       end
 
       if board_trial.draw
-        puts board_trial.board_format
+        # puts board_trial.board_format
         puts 'Its a draw game'
         break
       end
@@ -56,7 +56,7 @@ while !board_trial.winner && !board_trial.draw
       end
 
       if board_trial.draw
-        puts board_trial.board_format
+        # puts board_trial.board_format
         puts 'Its a draw game'
         break
       end
